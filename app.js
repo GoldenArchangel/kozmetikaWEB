@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // v 3.0
 const apiUrl = 'http://makeup-api.herokuapp.com/api/v1/products.json';
 
 app.use(express.static(path.join(__dirname, 'public')));
